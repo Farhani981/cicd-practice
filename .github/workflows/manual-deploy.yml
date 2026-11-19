@@ -1,0 +1,27 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment to deploy'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  manual-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build for Selected Environment (Dummy)
+        run: echo "Building application for ${{ github.event.inputs.environment }}..."
+
+      - name: Deploy Manually (Dummy)
+        run: echo "Successfully deployed to ${{ github.event.inputs.environment }}!"
