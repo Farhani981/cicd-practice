@@ -19,4 +19,4 @@ jobs:
           echo "Step 2: Building the project..."
 
       - name: Deploy to Server (Dummy)
-        run: echo "Step 3: Successfully deployed to Dev server automatically!"
+        run: echo "Step 3- Successfully deployed to Dev server automatically!"
